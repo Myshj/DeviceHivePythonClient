@@ -190,6 +190,8 @@ $RECYCLE.BIN/
 
 DHVirtualEnv
 
+Tests
+
 *.py[cod]
 
 # Packages
