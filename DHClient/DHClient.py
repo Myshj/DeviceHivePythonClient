@@ -909,7 +909,7 @@ class DHClient(object):
         """
 
         try:
-            print requests.delete(url=self.url+"/oauth/client/"+str(id),
+            requests.delete(url=self.url+"/oauth/client/"+str(id),
                             auth=(self.login, self.password)).text
         except:
             pass
@@ -1229,7 +1229,7 @@ class DHClient(object):
         except:
             return None
 
-        print r.text
+        #print r.text
 
         if r.status_code == 201:
             return UserCreatedResponse.UserCreatedResponse.FromDictionary(json.loads(r.text))
@@ -1631,7 +1631,7 @@ class DHClient(object):
         except:
             return None
 
-        print r.text
+        #print r.text
 
         if r.status_code == 200:
             return [DeviceNotification.DeviceNotification.FromDictionary(deviceNotificationDict) for deviceNotificationDict in json.loads(r.text)]
@@ -1653,7 +1653,7 @@ class DHClient(object):
         except:
             return None
 
-        print r.text
+        #print r.text
 
         if r.status_code == 200:
             return DeviceNotification.DeviceNotification.FromDictionary(json.loads(r.text))
@@ -1714,7 +1714,7 @@ class DHClient(object):
         except:
             return None
 
-        print r.text
+        #print r.text
 
         if r.status_code == 200:
             return [DeviceNotification.DeviceNotification.FromDictionary(deviceNotificationDict) for deviceNotificationDict in json.loads(r.text)]
